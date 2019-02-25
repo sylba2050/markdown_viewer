@@ -1,0 +1,14 @@
+.article {
+  list-style-type: none;
+}
+
+#markdown {
+  width: 48%;
+  height: 500px;
+  float: left;
+}
+
+#html {
+  width: 48%;
+  height: 500px;
+}

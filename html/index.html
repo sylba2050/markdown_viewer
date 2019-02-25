@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MstnMemo</title>
+  <!-- demo用 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="/js/highlight.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/github.css">
+  <link rel="stylesheet" type="text/css" href="/css/an-old-hope.css">
+</head>
+<body>
+  <div id="main">
+
+    <section>
+      <textarea id="markdown" v-model="markdown"></textarea>
+    </section>
+
+    <section v-if="hoge">
+      <textarea id="html" readonly>{{html}}</textarea>
+    </section>
+
+    <section class="markdown-body">
+      <div v-html="html"></div>
+    </section>
+
+  </div>
+</body>
+</html>

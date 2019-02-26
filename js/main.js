@@ -6,6 +6,7 @@ window.onload = function () {
       html: "",
       hoge: false,
       markdownLastChangeCount: 0,
+      markdown2htmlConvertFlg: false,
       count: 0,
     },
     created: function(){
@@ -15,11 +16,16 @@ window.onload = function () {
     watch: {
         markdown: function(){
             this.markdownLastChangeCount = 0;
+            this.markdown2htmlConvertFlg = false;
         },
         count: function(){
             if (this.markdownLastChangeCount < 100){
                 return;
             }
+            if (this.markdown2htmlConvertFlg){
+                return;
+            }
+            this.markdown2htmlConvertFlg = true;
 
             var json = {};
             json.md = this.markdown;

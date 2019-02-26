@@ -29,14 +29,7 @@ window.onload = function () {
             request.setRequestHeader("Content-Type", "application/json");
             request.onreadystatechange = function() {
               if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-
                 app.html = request.responseText;
-
-                var elms = document.getElementsByClassName("code");
-                for(var i=0, l=elms.length; l>i; i++){
-                  hljs.highlightBlock(elms[i]);
-                }
-
               }
             }
             request.send(JSON.stringify(json));

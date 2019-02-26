@@ -14,10 +14,9 @@ func main() {
     e.File("/", "html/index.html")
 
     e.File("/js/main.js", "js/main.js")
-    e.File("/js/highlight.min.js", "js/highlight.min.js")
 
     e.File("/css/style.css", "css/style.css")
-    e.File("/css/an-old-hope.css", "css/an-old-hope.css")
+    e.File("/css/code.css", "css/code.css")
     e.File("/css/github.css", "css/github.css")
  
     e.Start(":1323")
